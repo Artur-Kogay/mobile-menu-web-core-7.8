@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'TTLakes';
+    src: url('./assets/fonts/TT\ Lakes\ Neue\ Trial\ ExtraBold.ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('./assets/fonts/TT\ Lakes\ Neue\ Trial\ Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('./assets/fonts/TT\ Lakes\ Neue\ Trial\ Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('./assets/fonts/TT\ Lakes\ Neue\ Trial\ Light.ttf');
+    font-weight: 200;
+}
+
+:root{
+    --graphite-black: #1B1C21;
+    --gray: #7E7E82;
+    --mint: #41F6D7;
+    --ghostly-white: #f8f8f8;
+    --pink: #FF3E79;
+    --platinum: #EAEAEA;
+    --bright-mint: #B8FFEC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'TTLakes', sans-serif;
+    background-color: var(--ghostly-white);
+    color: var(--graphite-black);
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+li{
+    list-style: none;
+}
+
+a, span, p{
+    text-decoration: none;
+    color: var(--graphite-black);
+    font-size: 16px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+.menu{
+    width: 320px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.menu__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+}
+
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--pink);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.link:hover{
+    opacity: 0.5;
+}
+
+.close-btn{
+    position: relative;
+}
+
+.close-btn span{
+    width: 21.73px;
+    height: 2.17px;
+    border-radius: 1px;
+    background-color: white;
+    position: absolute;
+}
+
+.close-btn span:first-child{
+    transform: rotate(45deg);
+}
+
+.close-btn span:last-child{
+    transform: rotate(-45deg);
+}
+
+.menu__head--left{
+    display: flex;
+    align-items: center;
+    gap: 16.73px;
+}
+
+
+.menu__navigation{
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.menu__navigation a{
+    padding-left: 32px;
+    transition: 0.2s;
+}
+
+.menu__navigation a:hover{
+    color: var(--mint);
+}
+
+.active-link{
+    color: var(--gray);
+    position: relative;
+}
+
+.active-link::before{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 32px;
+    background-color: var(--mint);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    bottom: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.active-link:hover{
+    color: var(--mint);
+}
+
+.menu__tools-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 268px;
+}
+
+.menu__tools-contacts{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu__tools-switchers{
+    margin-top: 40px;
+    display: flex;
+    gap: 7px;
+}
+
+.menu__tools-switchers span{
+    cursor: pointer;
+    transition: 0.2s;
+} 
+
+.menu__tools-switchers span:hover{
+    color: var(--mint);
+}
+
+.active-switch{
+    color: var(--gray);
+}
